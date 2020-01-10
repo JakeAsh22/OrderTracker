@@ -2959,6 +2959,22 @@
     "CSharpLanguageVersion": 703
   },
   "RootNamespace": "OderTracker",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "/Users/jakeash/Desktop/OrderTracker/Views/Vendor/Index.cshtml",
+      "TargetPath": "Views/Vendor/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jakeash/Desktop/OrderTracker/Views/Vendor/New.cshtml",
+      "TargetPath": "Views/Vendor/New.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/jakeash/Desktop/OrderTracker/Views/Home/Index.cshtml",
+      "TargetPath": "Views/Home/Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
