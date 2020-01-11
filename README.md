@@ -9,6 +9,12 @@ Create a MVC application to track vendors that purchase baked goods and display 
 - Interact with user and create new vendors, and orders they have placed.
 - Separate frontend and backend logic.
 
+## Unit Testing
+| User input | Expected output |
+| :------------- | :------------- |
+| Bread, 7 | Bread order, amount of 7 |
+| "(empty)", 7 | , amout of 7 |
+
 ## Setup/Installation Requirements
 
 1. Clone this repo:
