@@ -22,7 +22,7 @@ Create a MVC application to track vendors that purchase baked goods and display 
 https://github.com/JakeAsh22/OrderTracker
 ```
 
-2. Go into the repo and run this application:
+2. Go into the repo and run this application: 
 ```
 $ dotnet run
 ```
