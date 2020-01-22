@@ -2,11 +2,11 @@
   Layout = "_Layout";
 }
 
-<h1>Add a new oder to @Model.Name</h1>
+<h1>Add a new order to @Model.Name</h1>
 
-<form action="/vendors/@Model.Id/oders" method="post">
+<form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-  <label for="oderDescription">Order Description</label>
-  <input id="oderDescription" name="oderDescription" type="text">
-  <button type='submit'>Add oder</button>
+  <label for="orderDescription">Order Description</label>
+  <input id="orderDescription" name="orderDescription" type="text">
+  <button type='submit'>Add order</button>
 </form>
