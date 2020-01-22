@@ -1,25 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using OrderTracker.Models;
+using System.Collections.Generic;
 
 namespace OrderTracker.Controllers
 {
-    public class VendorController : Controller
+  public class OrdersController : Controller
+  {
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-
-        [HttpGet("/vendor/index")]
-        public ActionResult Index()
-        {
-            List<Order> allOrders = Order.GetAll();
-            return View(allOrders);
-
-        }
-
-        [HttpGet("/vendor/new")]
-        public ActionResult New()
-        {
-            return View();
-        }
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
+
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
+    {
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("order", order);
+      model.Add("vendor", vendor);
+      return View(model);
+    }
+
+    [HttpPost("/orders/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearAll();
+      return View();
+    }
+  }
 }
